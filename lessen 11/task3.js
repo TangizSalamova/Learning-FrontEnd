@@ -1,18 +1,19 @@
 // [8,6,4,3,4] --> [2,2,1,3,4]
 
-var arr = [8,6,4,3,4];
+var array = [8,6,4,3,4];
 var newArr = [];
 
 var checkArr = (arr) => {
-    for(let i = 1; i < arr.length; i++){
-        if(arr[i-1] > arr[i] ){
-            newArr.push(arr[i-1] - arr[i]);
-        }else{
-            newArr.push[arr[i-1]];
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[i] > arr[j]){
+                arr[i] = arr[i] - arr[j];
+                break;
+            }
         }
     }
 
-    return newArr;
+    return arr;
 }
 
-console.log(checkArr(arr));
+console.log(checkArr(array));
