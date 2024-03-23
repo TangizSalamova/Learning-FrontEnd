@@ -62,28 +62,27 @@ var users = [
 
 // 3 task daxil edilen idye gore user silmek
 
-// var userId = prompt("id-ni daxil edin");
+var userId = prompt("id-ni daxil edin");
 
-// var deleteUser = (id) => {
-//   var foundUser = users.find((user) => user.id == id);
-//   if (foundUser) {
-//     delete foundUser;
-//   }
-//   if (!foundUser) {
-//     return {
-//       success: false,
-//       message: "User not found",
-//     };
-//   }
-//   return {
-//     success: true,
-//     message: "User Found",
-//     data: users,
-//   };
-// };
+var deleteUser = (id) => {
+  var foundUser = users.find((user) => user.id == id);
+  if (!foundUser) {
+    return {
+      success: false,
+      message: "User not found",
+    };
+  }
 
-// console.log(deleteUser(userId));
-// console.log(users);
+  users = users.filter((user) => user.id != id);
+  return {
+    success: true,
+    message: "User Found",
+    data: users,
+  };
+};
+
+console.log(deleteUser(userId));
+console.log(users);
 
 // 4 task verilen idye gore update etmek
 
@@ -110,15 +109,15 @@ var users = [
 
 // 5 task id daxil edende proqram sonlansin
 
-var idUser = prompt("id daxil edin")
-var endUsers = (id) =>{
-    return {
-        success: "end",
-        message: "prossess end",
-        data: users,
+// var idUser = prompt("id daxil edin")
+// var endUsers = (id) =>{
+//     return {
+//         success: "end",
+//         message: "prossess end",
+//         data: users,
 
-    }
-}
+//     }
+// }
 
-console.log(endUsers(idUser));
-console.log(users);
+// console.log(endUsers(idUser));
+// console.log(users);
