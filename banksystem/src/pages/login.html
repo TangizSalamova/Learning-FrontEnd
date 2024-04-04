@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="./js/index.js" defer type="module"></script>
+    <script src="../js/login.js" defer type="module"></script>
 </head>
 <body>
     <main>
         <div class="container">
-            <h2 class="title">Register</h2>
+            <h2 class="title">Login</h2>
             <form action="" class="form-main">
                 <div class="input-container">
                     <label for="name" class="form-label" >Name</label>
                     <input type="text" class="form-input" id="name" name="name">
                     <p class="error-message" id="error-name"></p>
-                </div>
-                <div class="input-container">
-                    <label for="surname" class="form-label">Surname</label>
-                    <input type="text" class="form-input" id="surname" name="surname">
-                    <p class="error-message" id="error-surname"></p>
                 </div>
                 <div class="input-container password-container">
                     <label for="password" class="form-label">Password</label>
@@ -33,17 +28,13 @@
                     <p class="error-message" id="error-password"></p>
                     <i class="fa-regular fa-eye form-hidden" id="hidden"></i>
                 </div>
-                <div class="input-container password-container">
-                    <label for="repeat-password" class="form-label">Repeat Password</label>
-                    <input type="password" class="form-input" id="repead-password" name="repeatPassword">
-                    <p class="error-message" id="error-repeatPassword"></p>
-                    <i class="fa-regular fa-eye form-hidden" id="hiddenRep"></i>
-                </div>
                 <div>
-                    <a href="./pages/login.html" class="login-link">Do you have another account?</a>
+                    <a href="../index.html" class="login-link">Want to register?</a>
                 </div>
+                <p class="error-message" id="error-server"></p>
+
                 <div class="button-container">
-                    <button type="submit" class="form-registerBtn">Register</button>
+                    <button type="submit" class="form-registerBtn form-login">Login</button>
                 </div>
             </form>
         </div>

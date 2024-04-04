@@ -8,14 +8,24 @@ import {
 const registrButton = document.querySelector(".form-registerBtn");
 const formMain = document.querySelector(".form-main");
 const hiddenButton = document.querySelector("#hidden");
+const hiddenButtonRep = document.querySelector("#hiddenRep");
 const passwordInp = document.querySelector("#password");
+const passworRepInp = document.querySelector("#repead-password");
 
 // Hidden Button path
 hiddenButton.addEventListener("click", () => {
-  if (passwordInp.getAttribute(type) === "passwprd") {
+  if (passwordInp.getAttribute("type") === "password") {
     passwordInp.setAttribute("type", "text");
   } else {
     passwordInp.setAttribute("type", "password");
+  }
+});
+
+hiddenButtonRep.addEventListener("click", () => {
+  if (passworRepInp.getAttribute("type") === "password") {
+    passworRepInp.setAttribute("type", "text");
+  } else {
+    passworRepInp.setAttribute("type", "password");
   }
 });
 
@@ -37,9 +47,9 @@ registrButton.addEventListener("mouseover", (e) => {
   }
 });
 
-// error message 
+// error message
 
-formRegisterBtn.addEventListener("click", (e) => {
+registrButton.addEventListener("click", (e) => {
   e.preventDefault();
   const { name, surname, password, repeatPassword } = formMain.elements;
 
@@ -76,5 +86,18 @@ formRegisterBtn.addEventListener("click", (e) => {
   } else {
     errorRepeatPassword.innerHTML = "";
   }
+
+  if (
+    nameResult.success &&
+    passwordResult.success &&
+    repeatPasswordResult.success &&
+    surnameResult.success
+  ) {
+    localStorage.setItem("name", name.value.trim());
+    localStorage.setItem("password", password.value.trim());
+
+    window.location.href = "./pages/login.html";
+  }
 });
 
+// alert("Hello World");
