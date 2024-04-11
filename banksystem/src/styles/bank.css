@@ -38,3 +38,92 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
+
+  .view {
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    gap: 10px;
+  }
+
+  .content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content h2,
+  .content h4 {
+    color: rgba(7, 63, 175, 0.765);
+  }
+  
+  .content h2 {
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .content h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .content #push-input, #pull-input, #deposit-input, #credit-input {
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px 20px;
+  }
+
+  .deposit, .credit {
+    color: rgba(7, 63, 175, 0.765);
+  }
+  
+  #select-credit, #select-deposit {
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 343px;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px 20px;
+  }
+  .operation-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+  .operation-content button {
+    background-color: rgba(7, 63, 175, 0.765);
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .my-balance {
+    display: flex;
+    column-gap: 5px;
+    color: #fff;
+    background-color: rgb(52, 8, 155);
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    right: 10px;
+    top: 110px;
+  }
+  
+  .depozit {
+    color: #fff;
+  }
